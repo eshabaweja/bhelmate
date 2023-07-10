@@ -1,0 +1,32 @@
+brain.md
+bhelvenv/
+
+db.sqlite3
+
+# Rasa generated files
+__pycache__/
+models/
+runs/
+results/
+
+# Virtual environment
+venv/
+
+# Rasa logs
+*.log
+
+# Other development-specific files
+*.db
+*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+
+ IDE and text editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency management
+requirements.txt
