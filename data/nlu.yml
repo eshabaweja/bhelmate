@@ -89,3 +89,85 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: leave_request
+  examples: |
+    - I want to take annual leave from [start_date] to [end_date].
+    - Can I request sick leave from [start_date] until [end_date]?
+    - How can I apply for maternity leave?
+    - I need to take [leave_type] starting [start_date] for [number_of_days] days.
+    - Can I take a vacation from [start_date] to [end_date]?
+    - What's the process to apply for leave?
+    - How many days of [leave_type] am I entitled to?
+
+- intent: payroll_information
+  examples: |
+    - What steps do I need to follow to access my payroll information?
+    - How can I check my salary details?
+    - Where can I find my pay stub?
+    - What is the process to view my paycheck?
+    - How can I access my pay slip?
+    - Where can I find information about tax deductions?
+    - What is the deadline to submit expense reports?
+
+- intent: benefits_enrollment
+  examples: |
+    - What is the enrollment process for the health insurance plan?
+    - How can I sign up for the retirement savings program?
+    - Where can I find information about the dental benefits?
+    - What are the eligibility criteria for the wellness program?
+    - How do I update my beneficiary information?
+    - Can I change my benefit elections after the enrollment period?
+    - What documents do I need to provide for dependent verification?
+
+- intent: company_policies
+  examples: |
+    - What is the policy for remote work?
+    - Can you explain the dress code policy?
+    - What are the guidelines for employee conduct?
+    - How many vacation days am I entitled to?
+    - What is the policy on work-from-home arrangements?
+    - Can you provide information about the parental leave policy?
+    - Where can I find the employee handbook?
+    - What is the policy for requesting time off?
+    - Can you explain the policy for overtime compensation?
+    - What are the guidelines for taking personal leave?
+
+- intent: onboarding_process
+  examples: |
+    - What should I expect during the onboarding process?
+    - How long does the onboarding process usually take?
+    - Can you explain the steps involved in employee orientation?
+    - What documents do I need to bring on my first day?
+    - Is there any training provided during the onboarding process?
+    - How can I access the onboarding materials?
+    - What information will I receive during the new hire orientation?
+    - Are there any specific forms I need to fill out during onboarding?
+    - Can you provide a checklist for the onboarding process?
+    - Is there an orientation program for new employees?
+
+- intent: performance_review
+  examples: |
+    - How often are performance reviews conducted?
+    - Can you explain the performance evaluation process?
+    - What factors are considered during performance assessments?
+    - How can I request feedback on my performance?
+    - Are there any performance improvement plans in place?
+    - What is the timeline for performance review discussions?
+    - Can you provide guidance on setting performance goals?
+    - What happens if I receive a poor performance review?
+    - How are promotions and salary increases determined?
+    - Is there a self-assessment component in performance reviews?
+
+- intent: training_and_development
+  examples: |
+    - What opportunities are available for professional development?
+    - Can you provide information about internal training programs?
+    - How can I enroll in external training courses?
+    - What is the process for requesting training reimbursement?
+    - Are there any mentorship programs within the company?
+    - Can you explain the performance feedback and coaching process?
+    - What resources are available for online learning?
+    - Are there any leadership development programs?
+    - How can I enhance my skills through cross-functional training?
+    - What certifications are recognized and supported by the company?

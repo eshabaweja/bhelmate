@@ -8,6 +8,13 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - leave_request
+  - payroll_information
+  - benefits_enrollment
+  - company_policies
+  - onboarding_process
+  - performance_review
+  - training_and_development
 
 responses:
   utter_greet:
@@ -28,6 +35,81 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_leave_request:
+  - text: "To request leave, please fill out the leave application form available on the HR portal. Make sure to provide the necessary details, including the dates and reason for your leave."
+  - text: "Leave requests should be submitted at least two weeks in advance through the HR portal. Once submitted, HR will review your request and notify you of its approval status."
+  - text: "You can submit your leave request through the HR portal by selecting the 'Leave Application' option. Make sure to provide accurate information and any supporting documentation if required."
+  - text: "For medical leave requests, you may be asked to provide a medical certificate from a registered healthcare professional. Please refer to the leave policy for specific requirements."
+  - text: "Leave entitlements depend on your employment contract and the company's leave policy. You can find detailed information about your leave entitlements in the employee handbook."
+  - text: "If you have any questions or concerns regarding your leave request, please reach out to the HR department. They will assist you and provide guidance throughout the process."
+  - text: "Before submitting a leave request, please ensure that you have sufficient accrued leave balance. You can check your leave balance through the HR portal or by contacting the HR department."
+
+  utter_payroll_information:
+  - text: "Payroll information, including salary, deductions, and tax withholdings, can be accessed through the HR portal. You will need to log in using your employee credentials to view your payroll details."
+  - text: "Payroll is processed on a monthly basis. You can expect to receive your salary on the designated payday, which is typically at the end of each month. Any changes to the payroll schedule will be communicated in advance."
+  - text: "If you have questions about your payroll, such as discrepancies or missing payments, please reach out to the HR department. They will investigate the issue and provide the necessary assistance."
+  - text: "Payroll documents, such as payslips and tax statements, are available for download on the HR portal. You can access and save these documents for your records."
+  - text: "Your payroll deductions may include taxes, social security contributions, health insurance premiums, and any other authorized deductions specified in your employment contract. The specific details can be found in your payslip."
+  - text: "If you need to make changes to your payroll information, such as updating your bank account details, please complete the payroll information change form available on the HR portal. HR will process your request accordingly."
+  - text: "Payroll-related queries, such as overtime calculations or reimbursements, can be addressed by contacting the HR department. They will provide the necessary information and guidance."
+
+  utter_benefits_enrollment:
+  - text: "To enroll in benefits, please complete the benefits enrollment form available on the HR portal. Make sure to review the available options and select the ones that best suit your needs."
+  - text: "The open enrollment period for benefits usually occurs once a year. During this time, you will have the opportunity to review and update your benefits selections. HR will provide you with the necessary information and instructions."
+  - text: "If you have experienced a qualifying life event, such as marriage or the birth of a child, you may be eligible for a mid-year benefits enrollment opportunity. Please contact the HR department to discuss your situation."
+  - text: "Our benefits package includes health insurance, retirement plans, paid time off, and other perks. You can find detailed information about each benefit option in the benefits guide provided by HR."
+  - text: "If you have questions about your benefits coverage or need assistance with benefits enrollment, please reach out to the HR department. They will guide you through the process and address any concerns you may have."
+  - text: "During the benefits enrollment process, make sure to carefully review the coverage options, costs, and any additional requirements. If you need clarification or more information, HR will be available to assist you."
+  - text: "The benefits enrollment period is a great opportunity to evaluate your current coverage and make changes if needed. Take the time to assess your needs and consider the available options before making your selections."
+
+  utter_company_policies:
+  - text: "Our company policy for remote work allows employees to work from home up to three days a week. Please refer to the employee handbook for more details."
+  - text: "The dress code policy at our company is business casual. We encourage employees to dress professionally while maintaining comfort. You can find more details in the employee handbook."
+  - text: "Employee conduct is governed by our company's code of conduct policy. We expect all employees to adhere to ethical standards and treat each other with respect. Please refer to the employee handbook for more information."
+  - text: "Employees are entitled to a total of 20 vacation days per year. Vacation requests should be submitted through the HR portal at least two weeks in advance."
+  - text: "Our company has a flexible work-from-home policy. Employees can work remotely with the approval of their manager. Please consult the employee handbook for more information."
+  - text: "Our company provides parental leave to eligible employees. You can find the details of our parental leave policy in the employee handbook."
+  - text: "The employee handbook contains all the policies and guidelines you need. You can access it through the HR portal or request a physical copy from the HR department."
+  - text: "To request time off, please submit a leave application through the HR portal. Make sure to follow the guidelines mentioned in the employee handbook."
+  - text: "Overtime compensation follows the company's policy on overtime. You will be compensated based on the applicable regulations and your employment contract. For more details, please refer to the employee handbook."
+  - text: "Employees are allowed to take personal leave when necessary. You need to submit a personal leave request through the HR portal, and it will be reviewed and approved based on the company's policy."
+
+  utter_onboarding_process:
+  - text: "During the onboarding process, you will receive an orientation session where you will learn about our company culture, policies, and procedures. It usually takes about a week to complete."
+  - text: "The onboarding process typically takes around two weeks. It involves filling out necessary paperwork, attending orientation sessions, and getting acquainted with your team and responsibilities."
+  - text: "Employee orientation includes several steps, such as completing HR paperwork, setting up your email and system access, attending training sessions, and meeting key stakeholders."
+  - text: "On your first day, please bring your identification documents, such as a passport or driver's license, and any other documents mentioned in the pre-employment checklist provided to you."
+  - text: "Yes, we provide training and onboarding materials to new hires. You will receive access to our learning management system, where you can find relevant resources and training modules."
+  - text: "You can access the onboarding materials through our company's learning portal. Once you log in, you will find a dedicated section for onboarding with all the necessary information and resources."
+  - text: "During the new hire orientation, you will receive information about our company's history, values, organizational structure, and employee benefits. It's an opportunity to get to know our company better."
+  - text: "As part of the onboarding process, you will need to fill out various forms, including tax forms, benefits enrollment forms, and emergency contact information. HR will provide you with the necessary forms and guidance."
+  - text: "Here is a checklist to help you navigate the onboarding process: 1. Complete HR paperwork, 2. Set up your email and system access, 3. Attend orientation sessions, 4. Meet your team and manager, 5. Review company policies and procedures."
+  - text: "Yes, we have a comprehensive orientation program for new employees. It includes sessions on our company culture, values, policies, and procedures to ensure a smooth transition into your new role."
+
+  utter_performance_review:
+  - text: "Performance reviews are conducted annually for all employees. During the review, your performance will be evaluated based on key performance indicators and feedback from your manager and peers."
+  - text: "The performance evaluation process involves assessing various factors, including goal achievement, skills development, teamwork, and overall contribution to the company's success."
+  - text: "If you would like feedback on your performance, you can request a performance review meeting with your manager. They will provide you with valuable insights and guidance for improvement."
+  - text: "If you receive a poor performance review, your manager will work with you to create a performance improvement plan. The plan will outline specific areas for improvement and provide support to help you succeed."
+  - text: "Promotions and salary increases are determined based on performance, skills, experience, and business needs. The decision is made through a comprehensive evaluation process involving multiple stakeholders."
+  - text: "Performance review discussions typically take place in the month following the end of the evaluation period. Your manager will schedule a meeting with you to provide feedback and discuss your performance."
+  - text: "Setting performance goals is an important part of the performance review process. Your manager will guide you in aligning your goals with the company's objectives and provide ongoing support."
+  - text: "If you have concerns or questions about your performance review, it's best to discuss them with your manager. They will be able to provide clarification and address any issues you may have."
+  - text: "We have a comprehensive performance feedback and coaching process in place. Regular feedback sessions with your manager will help you understand your strengths and areas for improvement."
+  - text: "The company values continuous improvement. If you have any suggestions for your professional development or training opportunities, please discuss them with your manager during the performance review."
+
+  utter_training_and_development:
+  - text: "We offer various opportunities for professional development, including internal training programs, workshops, and seminars. You can check the learning portal for upcoming training sessions."
+  - text: "Our company provides internal training programs to enhance employees' skills and knowledge. These programs cover a wide range of topics and are facilitated by internal subject matter experts."
+  - text: "If you're interested in enrolling in external training courses, please consult with your manager or the HR department. They will guide you on the process and provide necessary approvals."
+  - text: "To request training reimbursement, you need to submit a reimbursement form along with the relevant receipts and supporting documents. The HR department will review your request and process the reimbursement accordingly."
+  - text: "We have mentorship programs available for employees who are interested in professional growth and development. You can reach out to the HR department to express your interest in joining a mentorship program."
+  - text: "Performance feedback and coaching sessions are conducted regularly to support employees' growth and development. These sessions provide an opportunity to discuss your performance, goals, and areas for improvement."
+  - text: "Our company provides resources for online learning, such as access to e-learning platforms, industry-specific online courses, and webinars. You can explore these resources to enhance your skills and knowledge."
+  - text: "We offer leadership development programs for employees who aspire to take on leadership roles. These programs provide training, mentorship, and opportunities to develop leadership competencies."
+  - text: "Cross-functional training is encouraged as it helps employees gain a broader understanding of the business and develop new skills. You can discuss cross-functional training opportunities with your manager."
+  - text: "We recognize and support various certifications that are relevant to our industry and job roles. If you're interested in pursuing a specific certification, please discuss it with your manager or the HR department."
 
 session_config:
   session_expiration_time: 60
