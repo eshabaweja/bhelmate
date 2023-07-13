@@ -1,30 +1,47 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+- story: User greets the assistant
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: User asks for leave request information
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: leave_request
+  - action: utter_leave_request
 
-- story: sad path 2
+- story: User asks for payroll information
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: payroll_information
+  - action: utter_payroll_information
+
+- story: User asks about benefits enrollment
+  steps:
+  - intent: benefits_enrollment
+  - action: utter_benefits_enrollment
+
+- story: User inquires about company policies
+  steps:
+  - intent: company_policies
+  - action: utter_company_policies
+
+- story: User asks about the onboarding process
+  steps:
+  - intent: onboarding_process
+  - action: utter_onboarding_process
+
+- story: User asks about performance reviews
+  steps:
+  - intent: performance_review
+  - action: utter_performance_review
+
+- story: User asks about training and development opportunities
+  steps:
+  - intent: training_and_development
+  - action: utter_training_and_development
+
+- story: User says goodbye to the assistant
+  steps:
+  - intent: goodbye
   - action: utter_goodbye
