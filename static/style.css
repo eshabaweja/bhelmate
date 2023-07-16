@@ -1,70 +1,87 @@
-html {
+* {
+    margin: 0;
+    padding: 4px;
     box-sizing: border-box;
+    font-family: sans-serif;
   }
   
-  *,
-  *:before,
-  *:after {
-    margin: 0;
-    padding: 12px;
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+  p {
+    font-size: 1.6rem;
+    margin: 20px 0;
   }
-
-#bhel-chat{
+  
+  #bhel-chat {
     margin: 0 auto;
-    width: fit-content;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  @media screen and (min-width: 768px) {    
+    p {
+        font-size: 1.2rem;
+    }
 }
-
-#chat-head{
-    color: #e0e0e0;
+  
+  #chat-head {
+    color: #f0f0f0;
     background-color: #003399;
-}
-
-#chat-container {
-    width: 40vw;
-    height: 60vh;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  #chat-container {
+    height: 80vh;
     border: 1px solid #ccc;
     overflow-y: scroll;
-    padding: 10px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-}
-
-#chat-container>p {
-    margin: 5px 0;
-    /* padding: 5px; */
-    border-radius: 5px;
-}
-
-#chat-container>p.user-message {
+  }
+  
+  #chat-container > p {
+    margin: 10px 0;
+    padding: 20px 20px;
+    border-radius: 10px;
+  }
+  
+  #chat-container > p.user-message {
     max-width: 60%;
     align-self: flex-end;
-    color: #e0e0e0;
+    color: #f0f0f0;
     background-color: #003399;
-    border-radius: 8px 8px 0 8px;
-}
-
-#chat-container>p.bot-message {
+    border-radius: 50px 50px 0 50px;
+  }
+  
+  #chat-container > p.bot-message {
     max-width: 60%;
     align-self: flex-start;
-    background-color: #e0e0e0;
-    border-radius: 8px 8px 8px 0;
-}
-
-#message-form{
+    background-color: #f0f0f0;
+    border-radius: 50px 50px 50px 0;
+  }
+  
+  #message-form {
     width: 100%;
     display: flex;
     border: 1px solid #ccc;
-}
-
-#message-input{
+    /* padding: 20px 40px; */
+  }
+  
+  #message-input {
     flex: 1;
-}
-
-#send{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    height: 100%;
+    border: none;
+  }
+  
+  #send {
     flex-shrink: 0;
-    margin: auto 2px;
-}
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    margin-left: auto;
+    border-radius: 5px;
+  }
+  

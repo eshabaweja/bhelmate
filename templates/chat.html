@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <h1>Chat with BHELmate</h1>
+    <!-- <h1>Chat with BHELmate</h1> -->
     <div id="bhel-chat">
-        <div id="chat-head">
+        <h1 id="chat-head">
             BHELmate
-        </div>
+        </h1>
         <div id="chat-container">
             {% if result %}
             {% for message in result %}
@@ -23,7 +23,7 @@
         </div>
 
         <form id="message-form" method="POST" action="/parse" autocomplete="off">
-            <input type="text" name="messageText" id="message-input" placeholder="Type your message here">
+            <input type="text" name="messageText" id="message-input" autofocus="True" placeholder="How do I get a job?">
             <input id="send" type="submit" value="Send">
         </form>
     </div>

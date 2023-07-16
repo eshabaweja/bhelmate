@@ -7,7 +7,7 @@ messageForm.addEventListener("submit", function (event) {
     var message = messageInput.value.trim();
     if (message !== "") {
         var userMessage = document.createElement("p");
-        userMessage.innerText = "User: " + message;
+        userMessage.innerText = message;
         userMessage.classList.add("user-message");
         chatContainer.appendChild(userMessage);
         messageInput.value = "";
@@ -25,19 +25,19 @@ messageForm.addEventListener("submit", function (event) {
         })
             .then(function (response) {
                 // debug
-                console.log("Response from rasa:", response);
+                // console.log("Response from rasa:", response);
                 return response.json();
             })
             .then(function (result) {
                 // debug
-                console.log("Response from Rasa:", result);
+                // console.log("Response from Rasa:", result);
                 // Parse the response and update the chat container
                 try {
                     // var response = JSON.parse(result);
                     for (var i = 0; i < result.length; i++) {
                         var botMessage = document.createElement("p");
                         // botMessage.innerText = "Bot: " + response[i].text;
-                        botMessage.innerText = "Bot: " + result[i];
+                        botMessage.innerText = result[i];
                         // console.log(typeof(result))
                         botMessage.classList.add("bot-message");
                         chatContainer.appendChild(botMessage);
