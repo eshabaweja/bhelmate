@@ -2,82 +2,31 @@
 <html>
 
 <head>
-    <title>Chat</title>
-    <link rel="icon" type="image/x-icon"
-        href="data:image/x-icon;,">
+    <title>BHELmate</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;,">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
 </head>
 
 <body>
     <h1>Chat with BHELmate</h1>
-    <div id="chat-container">
-        {% if result %}
-        {% for message in result %}
-        <p>{{ message }}</p>
-        {% endfor %}
-        {% endif %}
+    <div id="bhel-chat">
+        <div id="chat-head">
+            BHELmate
+        </div>
+        <div id="chat-container">
+            {% if result %}
+            {% for message in result %}
+            <p>{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+        <form id="message-form" method="POST" action="/parse" autocomplete="off">
+            <input type="text" name="messageText" id="message-input" placeholder="Type your message here">
+            <input id="send" type="submit" value="Send">
+        </form>
     </div>
-    <form id="message-form" method="POST" action="/parse">
-        <input type="text" name="value1" id="message-input" placeholder="Type your message here">
-        <input type="submit" value="Send">
-    </form>
-    <script>
-        var chatContainer = document.getElementById("chat-container");
-        var messageForm = document.getElementById("message-form");
-        var messageInput = document.getElementById("message-input");
-
-        messageForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            var message = messageInput.value.trim();
-            if (message !== "") {
-                var chatMessage = document.createElement("p");
-                chatMessage.innerText = "User: " + message;
-                chatContainer.appendChild(chatMessage);
-                messageInput.value = "";
-
-                // Scroll to the bottom of the chat container
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-
-                // Submit the form asynchronously
-                fetch("/parse", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    body: "value1=" + encodeURIComponent(message)
-                })
-                    .then(function (response) {
-                        // debug
-                        console.log("Response from rasa:", response);
-                        return response.json();
-                    })
-                    .then(function (result) {
-                        // debug
-                        console.log("Response from Rasa:", result);
-                        // Parse the response and update the chat container
-                        try {
-                            // var response = JSON.parse(result);
-                            for (var i = 0; i < result.length; i++) {
-                                var chatMessage = document.createElement("p");
-                                // chatMessage.innerText = "Bot: " + response[i].text;
-                                chatMessage.innerText = "Bot: " + result[i];
-                                console.log(typeof(result))
-                                chatContainer.appendChild(chatMessage);
-                            }
-                        } catch (error) {
-                            // console.error("Error parsing JSON:", error);
-                            console.error("Error displaying result:", error);
-                        }
-
-                        // Scroll to the bottom of the chat container
-                        chatContainer.scrollTop = chatContainer.scrollHeight;
-                    })
-
-                    .catch(function (error) {
-                        console.error("Error:", error);
-                    });
-            }
-        });
-    </script>
 </body>
 
 </html>
