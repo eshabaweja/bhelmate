@@ -1,6 +1,12 @@
 version: "3.1"
 
 nlu:
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    
 - intent: greet
   examples: |
     - hey

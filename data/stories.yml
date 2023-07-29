@@ -45,3 +45,8 @@ stories:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+- story: fallback
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
