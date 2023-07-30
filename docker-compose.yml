@@ -1,15 +1,19 @@
 version: '3.9'
 services:
-  rasa:
+  bhel-rasa:
+    container_name: bhel-rasa
+    build:
+      context: .
+      dockerfile: rasa.dockerfile
+    ports:
+      - 5005:5005  # Rasa port
+
+  web:
+    container_name: web
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "5005:5005"  # Rasa port
-
-  flask:
-    build:
-      context: .
-      # dockerfile: Dockerfile
-    ports:
-      - "5000:5000"  # Flask port
+      - 8000:8000  # Flask port
+    depends_on:
+    - bhel-rasa

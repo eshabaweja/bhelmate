@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.9.17-bookworm
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY requirements.txt .
 
 # ENV FLASK_APP=app.py
 
-RUN pip3 install -r requirements.txt
+RUN apt-get update && apt-get -y install gcc && pip3 install --upgrade pip && pip3 install -r requirements.txt
 
 COPY . .
 

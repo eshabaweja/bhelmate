@@ -1,6 +1,10 @@
-from flask import Flask, render_template, request, jsonify
-import os, sys, requests, json
+import json
+import os
+import sys
 from random import randint
+
+import requests
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
@@ -36,4 +40,4 @@ def extract():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,  port=8000)
