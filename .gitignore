@@ -28,5 +28,3 @@ venv/
 *.swp
 *.swo
 
-# Dependency management
-requirements.txt

@@ -17,7 +17,7 @@ def extract():
     headers = {"Content-type": "application/json", "Accept": "text/plain"}
     response = requests.request(
         "POST",
-        url="http://localhost:5005/webhooks/rest/webhook",
+        url="http://bhel-rasa:5005/webhooks/rest/webhook",
         headers=headers,
         data=payload,
     )
